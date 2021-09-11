@@ -134,14 +134,18 @@ function buildMetadata(sample) {
   
  
     const firstSample = sampleNames[0];
+    buildMetadata(firstSample);
+    buildCharts(firstSample);
     buildGaugeChart(firstSample)
+    
   
   
   });
   }
   
   function optionChanged(newSample) {
-
+  buildMetadata(newSample);
+  buildCharts(newSample);
   buildGaugeChart(newSample)
   
   }
